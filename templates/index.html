@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gray-900 text-white min-h-[90vh] flex items-center overflow-hidden">
+    <!-- Abstract Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-[#0a192f] to-[#003366] z-0"></div>
+
+    <div class="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight animate-fade-in-up">
+                NexaTech <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#007BFF] to-blue-400">Solutions Tech
+                    Sur-Mesure</span> <br>
+                pour l'Afrique
+            </h1>
+            <p class="text-xl text-gray-300 max-w-lg">
+                Développement web, SaaS innovants et maintenance technique au Sénégal. Nous transformons vos idées en
+                réalité digitale.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <a href="{{ url_for('services') }}" class="btn-primary text-center">Découvrir nos services</a>
+                <a href="{{ url_for('contact') }}"
+                    class="btn-secondary text-center hover:bg-gray-800 border-white text-white hover:text-white">Parler
+                    à un expert</a>
+            </div>
+        </div>
+
+        <!-- Hero Visual/Illustration Placeholder -->
+        <div class="hidden md:flex justify-center items-center">
+            <div
+                class="w-full h-96 bg-gradient-to-tr from-blue-900/30 to-blue-500/10 rounded-2xl backdrop-blur-sm border border-white/10 flex items-center justify-center p-8 shadow-2xl">
+                <!-- Placeholder for future 3D element or illustration -->
+                <div class="text-center space-y-4">
+                    <svg class="w-32 h-32 mx-auto text-blue-500 opacity-80" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    <p class="text-blue-200 font-mono text-sm"> > initializing_future.exe ...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Notre Expertise</h2>
+            <p class="text-gray-600 text-lg">Des solutions complètes pour accompagner votre croissance numérique.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Web Dev -->
+            <div
+                class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                <div
+                    class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-600 text-2xl group-hover:bg-blue-600 group-hover:text-white transition">
+                    💻</div>
+                <h3 class="text-xl font-bold mb-3">Sites & App Web</h3>
+                <p class="text-gray-600 mb-6">Sites vitrines, e-commerce et applications métier sur-mesure conçus pour
+                    la performance.</p>
+                <a href="{{ url_for('services') }}" class="text-blue-600 font-semibold group-hover:underline">En savoir
+                    plus →</a>
+            </div>
+
+            <!-- SaaS -->
+            <div
+                class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                <div
+                    class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-6 text-orange-600 text-2xl group-hover:bg-orange-500 group-hover:text-white transition">
+                    🚀</div>
+                <h3 class="text-xl font-bold mb-3">Solutions SaaS</h3>
+                <p class="text-gray-600 mb-6">Développement de logiciels en ligne (SaaS) robustes et scalables adaptés à
+                    vos besoins spécifiques.</p>
+                <a href="{{ url_for('services') }}" class="text-blue-600 font-semibold group-hover:underline">Découvrir
+                    →</a>
+            </div>
+
+            <!-- Maintenance -->
+            <div
+                class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                <div
+                    class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-600 text-2xl group-hover:bg-green-600 group-hover:text-white transition">
+                    🔧</div>
+                <h3 class="text-xl font-bold mb-3">Support & Maintenance</h3>
+                <p class="text-gray-600 mb-6">Hébergement sécurisé, mises à jour régulières et support technique réactif
+                    24/7.</p>
+                <a href="{{ url_for('services') }}" class="text-blue-600 font-semibold group-hover:underline">Nos offres
+                    →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Immogest Highlight -->
+<section class="py-20 bg-gray-50 overflow-hidden">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 relative">
+                <!-- Decorative blob -->
+                <div
+                    class="absolute -top-10 -left-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
+                </div>
+                <div
+                    class="bg-white p-6 rounded-2xl shadow-2xl relative z-10 transform -rotate-2 hover:rotate-0 transition duration-500">
+                    <!-- Placeholder UI Mockup -->
+                    <div class="border-b pb-4 mb-4 flex justify-between items-center">
+                        <span class="font-bold text-gray-800">Immogest Dashboard</span>
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase">Revenus ce mois</p>
+                                <p class="text-3xl font-bold text-gray-900">1,250,000 FCFA</p>
+                            </div>
+                            <span class="text-green-500 bg-green-100 px-2 py-1 rounded text-xs font-bold">+12%</span>
+                        </div>
+                        <div class="h-32 bg-gray-100 rounded-lg flex items-end justify-between p-2 gap-2">
+                            <div class="w-full bg-blue-200 h-[40%] rounded-sm"></div>
+                            <div class="w-full bg-blue-300 h-[60%] rounded-sm"></div>
+                            <div class="w-full bg-blue-400 h-[50%] rounded-sm"></div>
+                            <div class="w-full bg-blue-500 h-[80%] rounded-sm"></div>
+                            <div class="w-full bg-blue-600 h-[90%] rounded-sm"></div>
+                        </div>
+                        <div class="space-y-2 pt-2">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200"></div> Locataire A. Diop
+                                </span>
+                                <span class="text-green-600 font-medium">Payé (Wave)</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200"></div> Locataire M. Sow
+                                </span>
+                                <span class="text-orange-500 font-medium">En attente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 space-y-6">
+                <span class="bg-orange-100 text-orange-700 px-4 py-1 rounded-full text-sm font-bold tracking-wide">NOTRE
+                    PRODUIT LIVE</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    Immogest - Révolutionnez votre <br>
+                    <span class="text-[#FF6B35]">Gestion Immobilière</span>
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Automatisez la collection des loyers via Mobile Money, gérez vos propriétés et locataires en un seul
+                    endroit. Fini les reçus papiers et les relances manuelles.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Paiement Orange Money / Wave intégré
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Dashboard propriétaire temps réel
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Rappels et quittances automatiques
+                    </li>
+                </ul>
+                <div class="pt-4 flex gap-4">
+                    <a href="{{ url_for('immogest') }}" class="btn-accent shadow-lg shadow-orange-500/30">Découvrir
+                        Immogest</a>
+                    <a href="#" class="flex items-center text-gray-600 font-medium hover:text-orange-600 transition">
+                        Rejoindre la beta <span class="ml-2">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats / Chiffres Clés -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-5xl md:text-6xl font-bold text-blue-600 mb-2">50+</div>
+                <p class="text-gray-600 font-medium">Projets réalisés</p>
+            </div>
+            <div>
+                <div class="text-5xl md:text-6xl font-bold text-blue-600 mb-2">100%</div>
+                <p class="text-gray-600 font-medium">Satisfaction clients</p>
+            </div>
+            <div>
+                <div class="text-5xl md:text-6xl font-bold text-blue-600 mb-2">24/7</div>
+                <p class="text-gray-600 font-medium">Support disponible</p>
+            </div>
+            <div>
+                <div class="text-5xl md:text-6xl font-bold text-blue-600 mb-2">3+</div>
+                <p class="text-gray-600 font-medium">Années d'expérience</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pourquoi NexaTech -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Pourquoi choisir NexaTech ?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex items-start gap-4">
+                    <div class="text-3xl flex-shrink-0">🎯</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-blue-900">Expertise locale, vision internationale</h3>
+                        <p class="text-gray-600">Connaissance du marché africain avec standards internationaux.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="text-3xl flex-shrink-0">💎</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-blue-900">Code de qualité, architectures scalables</h3>
+                        <p class="text-gray-600">Solutions robustes conçues pour grandir avec votre business.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="text-3xl flex-shrink-0">🤝</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-blue-900">Accompagnement de A à Z</h3>
+                        <p class="text-gray-600">De l'idée au déploiement, nous sommes à vos côtés.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="text-3xl flex-shrink-0">⚡</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-blue-900">Délais respectés, transparence totale</h3>
+                        <p class="text-gray-600">Communication claire et livraisons dans les temps.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="text-3xl flex-shrink-0">🇸🇳</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-blue-900">Basés à Dakar, disponibles 7j/7</h3>
+                        <p class="text-gray-600">Proximité et réactivité pour vos projets urgents.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="text-3xl flex-shrink-0">🚀</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-blue-900">Technologies modernes et performantes</h3>
+                        <p class="text-gray-600">Stack technique à jour pour des performances optimales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-blue-600 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+    <div class="container mx-auto px-4 text-center relative z-10 text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à digitaliser votre activité ?</h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Discutons de votre projet autour d'un café. Nous serions
+            ravis de vous aider à atteindre vos objectifs.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="{{ url_for('contact') }}"
+                class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">Demander
+                un devis gratuit</a>
+            <a href="tel:+221000000000"
+                class="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold hover:bg-white/20 transition">Appeler
+                maintenant</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+
+{% block title %}Immogest - Gestion Immobilière Automatisée{% endblock %}
+
+{% block content %}
+<!-- Hero Section Immogest -->
+<section class="relative bg-gradient-to-br from-gray-900 to-blue-900 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20">
+    </div>
+    <div class="container mx-auto px-4 py-24 relative z-10">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-3/5 space-y-6">
+                <div
+                    class="inline-block bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold animate-pulse">
+                    🎉 Beta Ouverte - 2 mois Gratuits
+                </div>
+                <h1 class="text-5xl font-bold leading-tight">
+                    Collectez vos loyers <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">en 2
+                        clics</span>
+                </h1>
+                <p class="text-xl text-blue-100 max-w-lg">
+                    La première plateforme sénégalaise de gestion immobilière automatisée. Conçue pour les bailleurs
+                    exigeants.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#signup"
+                        class="bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-600 transition shadow-lg shadow-orange-500/30 text-center">Rejoindre
+                        la beta gratuite</a>
+                    <a href="#" class="btn-secondary text-white border-white hover:bg-white/10 text-center">Voir la démo
+                        (2 min)</a>
+                </div>
+            </div>
+            <div class="md:w-2/5 relative">
+                <div class="relative z-10 transform rotate-1 hover:rotate-0 transition duration-500">
+                    <img src="{{ url_for('static', filename='images/immogest/mobile-app.png') }}"
+                        alt="App Mobile Immogest"
+                        class="rounded-[3rem] shadow-2xl mx-auto max-h-[600px] object-contain">
+                </div>
+                <!-- Background glow -->
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-500 filter blur-3xl opacity-20 z-0 rounded-full">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pain Points -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-16">Vous en avez marre de...</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                <div class="text-4xl mb-4">😫</div>
+                <h3 class="font-bold text-lg mb-2">Courir après les loyers</h3>
+                <p class="text-gray-600">Relances incessantes, appels manqués, excuses...</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                <div class="text-4xl mb-4">📉</div>
+                <h3 class="font-bold text-lg mb-2">Gérer des fichiers Excel</h3>
+                <p class="text-gray-600">Erreurs de calcul, fichiers perdus, pas de backup.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                <div class="text-4xl mb-4">📄</div>
+                <h3 class="font-bold text-lg mb-2">Perdre vos reçus</h3>
+                <p class="text-gray-600">Carnets à souche illisibles, quittances perdues.</p>
+            </div>
+        </div>
+        <div class="mt-12">
+            <p class="text-2xl font-bold text-blue-900">Immogest résout tout ça. <span
+                    class="text-orange-500">Automatiquement.</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+            <div>
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-6">💰
+                </div>
+                <h2 class="text-3xl font-bold mb-4">Collection Automatique</h2>
+                <p class="text-gray-600 text-lg mb-6">Vos locataires paient en 2 clics via Orange Money, Wave ou Free
+                    Money. Vous recevez l'argent instantanément. Rappels automatiques 3 jours avant l'échéance.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-700">✓ Intégration Wave & OM</li>
+                    <li class="flex items-center text-gray-700">✓ Reçus numériques automatiques</li>
+                    <li class="flex items-center text-gray-700">✓ Traçabilité totale (sms preuve)</li>
+                </ul>
+            </div>
+            <div class="bg-gray-100 rounded-2xl p-8 h-80 flex items-center justify-center">
+                <!-- Placeholder Feature Image -->
+                <p class="text-gray-400 font-bold">Screenshot Paiement</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 items-center flex-row-reverse">
+            <div class="order-first md:order-last">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-6">📊</div>
+                <h2 class="text-3xl font-bold mb-4">Dashboard Temps Réel</h2>
+                <p class="text-gray-600 text-lg mb-6">Visualisez tous vos loyers, paiements, retards en un coup d'œil.
+                    Graphiques clairs, exports Excel en 1 clic. Accès mobile et web.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-700">✓ Taux de recouvrement</li>
+                    <li class="flex items-center text-gray-700">✓ Alertes impayés</li>
+                    <li class="flex items-center text-gray-700">✓ Export comptable</li>
+                </ul>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-2xl">
+                <img src="{{ url_for('static', filename='images/immogest/dashboard.png') }}" alt="Dashboard Immogest"
+                    class="w-full h-auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="py-20 bg-gray-900 text-white" id="pricing">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-12">Tarification Simple</h2>
+
+        <div class="max-w-md mx-auto bg-white text-gray-900 rounded-2xl overflow-hidden shadow-2xl relative">
+            <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1">POPULAIRE</div>
+            <div class="p-8">
+                <h3 class="text-2xl font-bold mb-2">Commission</h3>
+                <div class="text-5xl font-bold text-blue-600 mb-2">5%<span class="text-lg font-normal text-gray-500">
+                        /loyer</span></div>
+                <p class="text-gray-500 mb-6">Vous payez uniquement sur ce qui est collecté</p>
+
+                <ul class="space-y-4 text-left border-t pt-6">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Toutes les fonctionnalités
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Support WhatsApp 7j/7
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Mises à jour gratuites
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Formation incluse
+                    </li>
+                </ul>
+
+                <div class="mt-8">
+                    <a href="#signup"
+                        class="block w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">Commencer
+                        gratuitement</a>
+                    <p class="text-xs text-gray-500 mt-2">2 mois offerts • Sans engagement</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Signup Form -->
+<section id="signup" class="py-20 bg-orange-500">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">Rejoignez les bailleurs modernes</h2>
+        <form class="max-w-xl mx-auto bg-white p-2 rounded-lg shadow-xl flex flex-col sm:flex-row gap-2">
+            <input type="email" placeholder="Votre email professionnel"
+                class="flex-grow px-4 py-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500" required>
+            <button type="submit"
+                class="bg-blue-900 text-white font-bold px-6 py-3 rounded-md hover:bg-gray-900 transition whitespace-nowrap">Créer
+                mon compte</button>
+        </form>
+        <p class="text-white/80 text-sm mt-4">En vous inscrivant, vous acceptez nos CGU.</p>
+    </div>
+</section>
+{% endblock %}

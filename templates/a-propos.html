@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}À Propos - NexaTech{% endblock %}
+
+{% block content %}
+<section class="bg-gray-900 text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4">À Propos de NexaTech</h1>
+        <p class="text-xl text-gray-400">Une vision locale, une expertise globale.</p>
+    </div>
+</section>
+
+<section class="py-20">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <div class="prose lg:prose-xl mx-auto text-gray-600 space-y-8">
+            <p>
+                <span class="font-bold text-gray-900">NexaTech</span> est née de la conviction que l'Afrique mérite des
+                solutions tech de classe mondiale, conçues localement. Fondée à Dakar, nous combinons expertise
+                technique internationale et connaissance profonde du marché sénégalais.
+            </p>
+            <p>
+                Notre mission : <strong>démocratiser l'accès aux technologies de pointe</strong> pour les entreprises
+                africaines, de la startup au grand groupe. Nous créons des solutions qui résolvent de vrais problèmes,
+                pas des gadgets.
+            </p>
+            <p>
+                Notre vision est de devenir le partenaire tech de référence en Afrique de l'Ouest, en développant des
+                produits SaaS qui transforment des secteurs entiers tout en accompagnant nos clients dans leur
+                transformation digitale.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Values -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-16">Nos Valeurs</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">💎</div>
+                <h3 class="font-bold text-xl mb-3">Excellence</h3>
+                <p class="text-gray-600">Code propre, architectures scalables, bonnes pratiques systématiques.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">🤝</div>
+                <h3 class="font-bold text-xl mb-3">Transparence</h3>
+                <p class="text-gray-600">Communication claire, pas de surprises, budgets respectés.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">🌍</div>
+                <h3 class="font-bold text-xl mb-3">Innovation Locale</h3>
+                <p class="text-gray-600">Solutions adaptées au contexte africain, pas de copier-coller.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">🚀</div>
+                <h3 class="font-bold text-xl mb-3">Impact Réel</h3>
+                <p class="text-gray-600">On mesure notre succès aux résultats de nos clients.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stack -->
+<section class="py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-12">Notre Stack Technique</h2>
+        <div class="flex flex-wrap justify-center gap-4 md:gap-8 opacity-70">
+            <!-- Logos generated as text for now, could be images -->
+            <span class="text-2xl font-bold text-gray-400">Python</span>
+            <span class="text-2xl font-bold text-gray-400">Flask</span>
+            <span class="text-2xl font-bold text-gray-400">React</span>
+            <span class="text-2xl font-bold text-gray-400">Tailwind</span>
+            <span class="text-2xl font-bold text-gray-400">PostgreSQL</span>
+            <span class="text-2xl font-bold text-gray-400">Docker</span>
+            <span class="text-2xl font-bold text-gray-400">Vercel</span>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,43 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon: Geometric N with tech elements -->
+  <g id="icon">
+    <!-- Base N shape with gradient -->
+    <defs>
+      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+      </linearGradient>
+      <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    
+    <!-- Left vertical bar -->
+    <rect x="5" y="10" width="6" height="40" rx="3" fill="url(#gradient1)"/>
+    
+    <!-- Diagonal connecting bar with circuit pattern -->
+    <path d="M 11 15 L 35 45" stroke="url(#gradient2)" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Right vertical bar -->
+    <rect x="35" y="10" width="6" height="40" rx="3" fill="url(#gradient1)"/>
+    
+    <!-- Tech circuit dots -->
+    <circle cx="23" cy="25" r="2.5" fill="#f97316"/>
+    <circle cx="23" cy="35" r="2.5" fill="#3b82f6"/>
+    
+    <!-- Connection lines (circuit board style) -->
+    <line x1="8" y1="20" x2="13" y2="20" stroke="#3b82f6" stroke-width="1.5" opacity="0.6"/>
+    <line x1="35" y1="40" x2="40" y2="40" stroke="#f97316" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  
+  <!-- Text: NexaTech -->
+  <g id="text">
+    <text x="55" y="38" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#0f172a">
+      Nexa<tspan fill="#3b82f6">Tech</tspan>
+    </text>
+    <text x="56" y="52" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="500" fill="#64748b" letter-spacing="1.5">
+      SOLUTIONS TECH
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}Nos Services - NexaTech{% endblock %}
+
+{% block content %}
+<section class="bg-gray-900 text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4">Nos Services</h1>
+        <p class="text-xl text-gray-400">Des solutions techniques complètes pour votre transformation digitale</p>
+    </div>
+</section>
+
+<section class="py-20">
+    <div class="container mx-auto px-4">
+        <!-- Service 1 -->
+        <div class="flex flex-col md:flex-row gap-12 mb-20 items-center">
+            <div class="md:w-1/2">
+                <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-6">💻</div>
+                <h2 class="text-3xl font-bold mb-4">Développement Web Sur-Mesure</h2>
+                <div class="prose lg:prose-xl text-gray-600 mb-6">
+                    <p>Nous concevons des sites web et des applications performants, sécurisés et optimisés pour le
+                        référencement. Que ce soit pour une vitrine ou une plateforme complexe, nous avons l'expertise.
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 mt-4">
+                        <li>Sites vitrines professionnels</li>
+                        <li>E-commerce (boutiques en ligne)</li>
+                        <li>Applications web métier (Intranets, CRM)</li>
+                        <li>APIs REST et intégrations</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                    <p class="font-bold text-gray-800 mb-2">Technologies :</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Flask</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="{{ url_for('contact') }}" class="btn-primary">Demander un devis</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&q=80" alt="Développement Web"
+                    class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+            </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="flex flex-col md:flex-row-reverse gap-12 mb-20 items-center">
+            <div class="md:w-1/2">
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-6">🚀
+                </div>
+                <h2 class="text-3xl font-bold mb-4">Développement SaaS Personnalisé</h2>
+                <div class="prose lg:prose-xl text-gray-600 mb-6">
+                    <p>Automatisez vos processus métier avec des logiciels en ligne créés sur mesure pour votre
+                        entreprise. Nous transformons vos fichiers Excel complexes en applications web intuitives.</p>
+                    <ul class="list-disc pl-5 space-y-2 mt-4">
+                        <li>Gestion de stock et inventaire</li>
+                        <li>Systèmes de gestion scolaire ou clinique</li>
+                        <li>Marketplaces et plateformes de mise en relation</li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <a href="{{ url_for('contact') }}" class="btn-primary">Parlons de votre idée</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80" alt="SaaS"
+                    class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2">
+                <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-6">🔧</div>
+                <h2 class="text-3xl font-bold mb-4">Maintenance & Support Technique</h2>
+                <p class="text-gray-600 mb-6">Ne laissez pas votre site à l'abandon. Nous assurons la sécurité, les
+                    mises à jour et la performance de votre présence en ligne.</p>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="border p-6 rounded-xl hover:border-blue-500 transition cursor-pointer">
+                        <h3 class="font-bold text-xl mb-2">Basic</h3>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">50,000 FCFA<span
+                                class="text-sm text-gray-500 font-normal">/mois</span></p>
+                        <ul class="text-sm space-y-2 text-gray-600">
+                            <li>✓ Hébergement inclus</li>
+                            <li>✓ Mises à jour sécurité</li>
+                            <li>✓ Support email (48h)</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="border p-6 rounded-xl border-blue-100 bg-blue-50 hover:border-blue-500 transition cursor-pointer relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs px-2 py-1">Recommandé</div>
+                        <h3 class="font-bold text-xl mb-2">Pro</h3>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">100,000 FCFA<span
+                                class="text-sm text-gray-500 font-normal">/mois</span></p>
+                        <ul class="text-sm space-y-2 text-gray-600">
+                            <li>✓ Sauvegardes quotidiennes</li>
+                            <li>✓ Support prioritaire (24h)</li>
+                            <li>✓ 2h modifications/mois</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <a href="{{ url_for('contact') }}" class="btn-primary">Choisir un forfait</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80" alt="Maintenance"
+                    class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
