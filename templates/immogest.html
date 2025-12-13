@@ -10,6 +10,13 @@
     <div class="container mx-auto px-4 py-24 relative z-10">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-3/5 space-y-6">
+                <img src="{{ url_for('static', filename='images/immogest_logo.svg') }}" alt="Immogest Logo" class="h-16 mb-4">
+                <style>
+                    /* Fallback style for the logo if SVG fails to load */
+                    img[alt="Immogest Logo"] {
+                        min-width: 200px;
+                    }
+                </style>
                 <div
                     class="inline-block bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold animate-pulse">
                     🎉 Beta Ouverte - 2 mois Gratuits

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+    <!-- Icon: House with bar chart -->
+    <path d="M15 25 L40 5 L65 25 V45 H15 V25 Z" fill="#FF6B35" />
+    <rect x="25" y="30" width="8" height="15" rx="1" fill="white" />
+    <rect x="36" y="22" width="8" height="23" rx="1" fill="white" />
+    <rect x="47" y="15" width="8" height="30" rx="1" fill="white" />
+    
+    <!-- Text: Immogest -->
+    <text x="80" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="#1e3a8a">Immo</text>
+    <text x="165" y="35" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="#FF6B35">gest</text>
+</svg>
