@@ -90,9 +90,38 @@
                     <li class="flex items-center text-gray-700">✓ Traçabilité totale (sms preuve)</li>
                 </ul>
             </div>
-            <div class="bg-gray-100 rounded-2xl p-8 h-80 flex items-center justify-center">
-                <!-- Placeholder Feature Image -->
-                <p class="text-gray-400 font-bold">Screenshot Paiement</p>
+            <!-- Mobile Payment Mockup -->
+            <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 shadow-xl">
+                <div class="bg-white rounded-xl shadow-lg max-w-xs mx-auto overflow-hidden">
+                    <!-- Phone header -->
+                    <div class="bg-gray-900 text-white px-4 py-2 flex justify-between text-xs">
+                        <span>9:41</span>
+                        <span>📶 100%</span>
+                    </div>
+                    <!-- App content -->
+                    <div class="p-4 space-y-4">
+                        <div class="text-center">
+                            <p class="text-gray-500 text-sm">Loyer Appartement B4</p>
+                            <p class="text-3xl font-bold text-gray-900">200,000 <span class="text-lg">FCFA</span></p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-3 text-sm">
+                            <p class="text-gray-600">Locataire: <span class="font-semibold">Amadou Diallo</span></p>
+                            <p class="text-gray-600">Échéance: <span class="text-orange-600 font-semibold">05 Jan
+                                    2025</span></p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-orange-100 rounded-lg p-2 text-center border-2 border-orange-400">
+                                <span class="text-orange-600 font-bold text-sm">Orange Money</span>
+                            </div>
+                            <div class="bg-blue-50 rounded-lg p-2 text-center">
+                                <span class="text-blue-600 text-sm">Wave</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 text-white font-bold py-3 rounded-lg">
+                            Payer maintenant
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -113,60 +142,392 @@
                     class="w-full h-auto">
             </div>
         </div>
+
+        <!-- Feature 3 - Gestion Locataires -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+            <div>
+                <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-6">👥
+                </div>
+                <h2 class="text-3xl font-bold mb-4">Gestion Locataires Simplifiée</h2>
+                <p class="text-gray-600 text-lg mb-6">Fiches locataires complètes, historique paiements, documents de
+                    bail stockés. Génération automatique de quittances et reçus.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-700">✓ Fiches complètes avec photos</li>
+                    <li class="flex items-center text-gray-700">✓ Documents stockés en cloud</li>
+                    <li class="flex items-center text-gray-700">✓ Historique complet</li>
+                </ul>
+            </div>
+            <!-- Tenant Cards Mockup -->
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 shadow-xl">
+                <div class="space-y-3">
+                    <!-- Tenant Card 1 -->
+                    <div class="bg-white rounded-lg p-3 shadow-sm flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center font-bold text-blue-700">
+                            AD</div>
+                        <div class="flex-grow">
+                            <p class="font-semibold text-sm">Amadou Diallo</p>
+                            <p class="text-xs text-gray-500">Apt B4 • 200,000 FCFA</p>
+                        </div>
+                        <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Payé</span>
+                    </div>
+                    <!-- Tenant Card 2 -->
+                    <div class="bg-white rounded-lg p-3 shadow-sm flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center font-bold text-purple-700">
+                            FN</div>
+                        <div class="flex-grow">
+                            <p class="font-semibold text-sm">Fatou Ndiaye</p>
+                            <p class="text-xs text-gray-500">Studio A2 • 150,000 FCFA</p>
+                        </div>
+                        <span class="bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded">En attente</span>
+                    </div>
+                    <!-- Tenant Card 3 -->
+                    <div class="bg-white rounded-lg p-3 shadow-sm flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-green-200 rounded-full flex items-center justify-center font-bold text-green-700">
+                            MS</div>
+                        <div class="flex-grow">
+                            <p class="font-semibold text-sm">Moussa Sow</p>
+                            <p class="text-xs text-gray-500">Villa C1 • 350,000 FCFA</p>
+                        </div>
+                        <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Payé</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 4 - Maintenance -->
+        <div class="grid md:grid-cols-2 gap-16 items-center flex-row-reverse mb-20">
+            <div class="order-first md:order-last">
+                <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-6">🔧</div>
+                <h2 class="text-3xl font-bold mb-4">Maintenance Intégrée</h2>
+                <p class="text-gray-600 text-lg mb-6">Locataire signale un problème dans l'app. Système dispatche un
+                    prestataire vérifié. Vous suivez l'intervention en temps réel.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-700">✓ Réseau prestataires vérifiés</li>
+                    <li class="flex items-center text-gray-700">✓ Signalement et facturation automatiques</li>
+                    <li class="flex items-center text-gray-700">✓ Suivi intervention temps réel</li>
+                </ul>
+            </div>
+            <!-- Maintenance Tickets Mockup -->
+            <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-6 shadow-xl">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="font-bold text-gray-800">Tickets ouvert</span>
+                        <span class="bg-red-500 text-white text-xs px-2 py-1 rounded-full">3 actifs</span>
+                    </div>
+                    <!-- Ticket 1 -->
+                    <div class="bg-white rounded-lg p-3 shadow-sm border-l-4 border-red-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-semibold text-sm">🚿 Fuite d'eau - Apt B4</p>
+                                <p class="text-xs text-gray-500">Signalé il y a 2h</p>
+                            </div>
+                            <span class="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded">En cours</span>
+                        </div>
+                    </div>
+                    <!-- Ticket 2 -->
+                    <div class="bg-white rounded-lg p-3 shadow-sm border-l-4 border-orange-400">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-semibold text-sm">💡 Panne électrique - Villa C1</p>
+                                <p class="text-xs text-gray-500">Signalé hier</p>
+                            </div>
+                            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">Programmé</span>
+                        </div>
+                    </div>
+                    <!-- Ticket 3 -->
+                    <div class="bg-white rounded-lg p-3 shadow-sm border-l-4 border-green-500">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-semibold text-sm">🔒 Serrure cassée - Studio A2</p>
+                                <p class="text-xs text-gray-500">Résolu</p>
+                            </div>
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Terminé</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 5 - Communication -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+            <div>
+                <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-6">📱</div>
+                <h2 class="text-3xl font-bold mb-4">Communication Centralisée</h2>
+                <p class="text-gray-600 text-lg mb-6">Chat intégré bailleur-locataire. Notifications SMS/WhatsApp
+                    automatiques. Historique complet accessible.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-700">✓ Messagerie intégrée</li>
+                    <li class="flex items-center text-gray-700">✓ Notifications multi-canaux</li>
+                    <li class="flex items-center text-gray-700">✓ Templates personnalisables</li>
+                </ul>
+            </div>
+            <!-- Chat Mockup -->
+            <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 shadow-xl">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-green-600 text-white px-4 py-3 flex items-center gap-3">
+                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">💬</div>
+                        <span class="font-semibold">Amadou Diallo</span>
+                    </div>
+                    <div class="p-4 space-y-3 h-48 overflow-hidden">
+                        <!-- Message received -->
+                        <div class="flex gap-2">
+                            <div class="bg-gray-100 rounded-lg rounded-tl-none p-3 max-w-[80%]">
+                                <p class="text-sm">Bonjour, j'ai un problème avec la climatisation</p>
+                                <p class="text-xs text-gray-400 mt-1">10:32</p>
+                            </div>
+                        </div>
+                        <!-- Message sent -->
+                        <div class="flex gap-2 justify-end">
+                            <div class="bg-green-500 text-white rounded-lg rounded-tr-none p-3 max-w-[80%]">
+                                <p class="text-sm">Bonjour Amadou, je programme une intervention demain matin. ✅</p>
+                                <p class="text-xs text-green-200 mt-1">10:35</p>
+                            </div>
+                        </div>
+                        <!-- Auto notification -->
+                        <div class="text-center">
+                            <span class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full">🔔 SMS envoyé au
+                                locataire</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 6 - Reporting -->
+        <div class="grid md:grid-cols-2 gap-16 items-center flex-row-reverse">
+            <div class="order-first md:order-last">
+                <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-6">📈
+                </div>
+                <h2 class="text-3xl font-bold mb-4">Reporting Intelligent</h2>
+                <p class="text-gray-600 text-lg mb-6">Taux de collecte, revenus mensuels, tendances. Prêt pour votre
+                    comptable ou la banque.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-gray-700">✓ Tableaux de bord dynamiques</li>
+                    <li class="flex items-center text-gray-700">✓ Export Excel/PDF</li>
+                    <li class="flex items-center text-gray-700">✓ Analyses prédictives</li>
+                </ul>
+            </div>
+            <!-- Reporting Mockup -->
+            <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-6 shadow-xl">
+                <div class="bg-white rounded-xl shadow-lg p-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-bold text-gray-800">Revenus 2024</span>
+                        <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">📊 Export</span>
+                    </div>
+                    <!-- Chart simulation -->
+                    <div class="flex items-end gap-2 h-28 mb-4">
+                        <div class="flex-1 bg-blue-200 rounded-t" style="height: 40%"></div>
+                        <div class="flex-1 bg-blue-300 rounded-t" style="height: 55%"></div>
+                        <div class="flex-1 bg-blue-400 rounded-t" style="height: 50%"></div>
+                        <div class="flex-1 bg-blue-500 rounded-t" style="height: 70%"></div>
+                        <div class="flex-1 bg-blue-600 rounded-t" style="height: 85%"></div>
+                        <div class="flex-1 bg-indigo-600 rounded-t" style="height: 100%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-400">
+                        <span>Jan</span><span>Fév</span><span>Mar</span><span>Avr</span><span>Mai</span><span>Juin</span>
+                    </div>
+                    <!-- Stats row -->
+                    <div class="grid grid-cols-2 gap-4 mt-4 pt-4 border-t">
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-green-600">98%</p>
+                            <p class="text-xs text-gray-500">Taux collecte</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-blue-600">15.2M</p>
+                            <p class="text-xs text-gray-500">Revenus FCFA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Pricing -->
 <section class="py-20 bg-gray-900 text-white" id="pricing">
     <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-12">Tarification Simple</h2>
+        <h2 class="text-3xl font-bold mb-12">Tarification Simple et Transparente</h2>
 
-        <div class="max-w-md mx-auto bg-white text-gray-900 rounded-2xl overflow-hidden shadow-2xl relative">
-            <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1">POPULAIRE</div>
-            <div class="p-8">
-                <h3 class="text-2xl font-bold mb-2">Commission</h3>
-                <div class="text-5xl font-bold text-blue-600 mb-2">5%<span class="text-lg font-normal text-gray-500">
-                        /loyer</span></div>
-                <p class="text-gray-500 mb-6">Vous payez uniquement sur ce qui est collecté</p>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Option 1 - Commission -->
+            <div class="bg-white text-gray-900 rounded-2xl overflow-hidden shadow-2xl relative">
+                <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1">POPULAIRE</div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Commission</h3>
+                    <div class="text-5xl font-bold text-blue-600 mb-2">5%<span
+                            class="text-lg font-normal text-gray-500">
+                            /loyer collecté</span></div>
+                    <p class="text-gray-500 mb-6">Vous payez uniquement sur ce qui est collecté</p>
+                    <p class="text-sm text-gray-600 mb-6">Ex: Loyer 200,000 FCFA → vous payez 10,000 FCFA</p>
 
-                <ul class="space-y-4 text-left border-t pt-6">
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg>
-                        Toutes les fonctionnalités
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg>
-                        Support WhatsApp 7j/7
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg>
-                        Mises à jour gratuites
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg>
-                        Formation incluse
-                    </li>
-                </ul>
+                    <ul class="space-y-4 text-left border-t pt-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                            Toutes les fonctionnalités
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                            Support WhatsApp 7j/7
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                            Mises à jour gratuites
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                            Formation incluse
+                        </li>
+                    </ul>
 
-                <div class="mt-8">
-                    <a href="#signup"
-                        class="block w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">Commencer
-                        gratuitement</a>
-                    <p class="text-xs text-gray-500 mt-2">2 mois offerts • Sans engagement</p>
+                    <div class="mt-8">
+                        <a href="#signup"
+                            class="block w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">Commencer
+                            gratuitement</a>
+                        <p class="text-xs text-gray-500 mt-2">2 mois offerts • Sans engagement</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Option 2 - Forfait -->
+            <div class="bg-white text-gray-900 rounded-2xl overflow-hidden shadow-2xl">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Forfait</h3>
+                    <div class="text-5xl font-bold text-orange-600 mb-2">10,000<span
+                            class="text-lg font-normal text-gray-500">
+                            FCFA/propriété/mois</span></div>
+                    <p class="text-gray-500 mb-6">Pas de commission, tarif fixe</p>
+                    <p class="text-sm text-gray-600 mb-6">Idéal pour les petits loyers</p>
+
+                    <ul class="space-y-4 text-left border-t pt-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                            Toutes les fonctionnalités
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                            Support prioritaire
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                            Pas de commission variable
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7">
+                                </path>
+                            </svg>
+                            Tarif prévisible
+                        </li>
+                    </ul>
+
+                    <div class="mt-8">
+                        <a href="#signup"
+                            class="block w-full bg-orange-600 text-white font-bold py-3 rounded-lg hover:bg-orange-700 transition">Commencer
+                            gratuitement</a>
+                        <p class="text-xs text-gray-500 mt-2">2 mois offerts • Sans engagement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-blue-200 mt-8 text-sm">🎁 Offre Beta : 2 premiers mois GRATUITS quelle que soit l'option choisie
+        </p>
+    </div>
+</section>
+
+<!-- FAQ Immogest -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Questions Fréquentes</h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+
+            <div class="border-b border-gray-200 pb-6">
+                <h3 class="font-bold text-lg mb-2">💰 C'est vraiment gratuit les 2 premiers mois ?</h3>
+                <p class="text-gray-600">Oui, totalement. Aucune carte bancaire demandée. Vous annulez quand vous
+                    voulez. C'est notre façon de vous laisser découvrir Immogest sans risque.</p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <h3 class="font-bold text-lg mb-2">📱 Mes locataires doivent installer une app ?</h3>
+                <p class="text-gray-600">Oui, une app mobile simple (2 minutes d'installation). On les forme et on leur
+                    envoie un guide pas à pas. L'app est très intuitive, même pour les moins technophiles.</p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <h3 class="font-bold text-lg mb-2">📞 Et si mes locataires n'ont pas de smartphone ?</h3>
+                <p class="text-gray-600">Ils peuvent payer via code USSD (comme Orange Money classique) sans smartphone.
+                    Ils reçoivent ensuite les instructions par SMS.</p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <h3 class="font-bold text-lg mb-2">💸 Vous touchez mon argent ?</h3>
+                <p class="text-gray-600">Non, jamais. Les loyers vont directement de votre locataire à votre compte
+                    mobile money. Nous ne touchons jamais votre argent. Notre commission est prélevée séparément.</p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <h3 class="font-bold text-lg mb-2">❌ Je peux arrêter quand je veux ?</h3>
+                <p class="text-gray-600">Oui, aucun engagement. Cancel en 1 clic depuis votre dashboard. Vos données
+                    restent accessibles en lecture seule pendant 30 jours.</p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <h3 class="font-bold text-lg mb-2">🏢 Vous gérez combien de propriétés max ?</h3>
+                <p class="text-gray-600">Illimité. De 1 à 1000+ propriétés. Le système est conçu pour grandir avec vous,
+                    que vous ayez un studio ou un parc entier.</p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <h3 class="font-bold text-lg mb-2">🆘 Support technique disponible ?</h3>
+                <p class="text-gray-600">Oui ! WhatsApp 7j/7 pendant la beta (réponse sous 2h en moyenne). Email 24/7.
+                    Après la beta, support email garanti sous 48h.</p>
+            </div>
+
+            <div class="border-b border-gray-200 pb-6">
+                <h3 class="font-bold text-lg mb-2">🔒 Mes données sont sécurisées ?</h3>
+                <p class="text-gray-600">Oui. Chiffrement bancaire (SSL 256-bit), hébergement sécurisé sur serveurs
+                    européens, backups quotidiens automatiques. Conformité RGPD.</p>
+            </div>
+
         </div>
     </div>
 </section>
@@ -175,8 +536,10 @@
 <section id="signup" class="py-20 bg-orange-500">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold text-white mb-8">Rejoignez les bailleurs modernes</h2>
-        <form class="max-w-xl mx-auto bg-white p-2 rounded-lg shadow-xl flex flex-col sm:flex-row gap-2">
-            <input type="email" placeholder="Votre email professionnel"
+        <div id="beta-feedback"></div>
+        <form hx-post="{{ url_for('immogest_beta') }}" hx-target="#beta-feedback" hx-swap="innerHTML"
+            class="max-w-xl mx-auto bg-white p-2 rounded-lg shadow-xl flex flex-col sm:flex-row gap-2">
+            <input type="email" name="email" placeholder="Votre email professionnel"
                 class="flex-grow px-4 py-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500" required>
             <button type="submit"
                 class="bg-blue-900 text-white font-bold px-6 py-3 rounded-md hover:bg-gray-900 transition whitespace-nowrap">Créer

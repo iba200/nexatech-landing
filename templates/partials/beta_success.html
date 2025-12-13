@@ -1,0 +1,17 @@
+{% if already_registered %}
+<div class="bg-blue-50 border-2 border-blue-500 rounded-lg p-6 text-center">
+    <div class="text-blue-600 text-5xl mb-4">📧</div>
+    <h3 class="text-2xl font-bold text-blue-900 mb-2">Vous êtes déjà inscrit(e) !</h3>
+    <p class="text-blue-700 mb-4">L'adresse <strong>{{ email }}</strong> est déjà enregistrée pour la beta Immogest.</p>
+    <p class="text-sm text-blue-600">Notre équipe vous contactera très bientôt avec vos accès.</p>
+</div>
+{% else %}
+<div class="bg-green-50 border-2 border-green-500 rounded-lg p-6 text-center">
+    <div class="text-green-600 text-5xl mb-4">✓</div>
+    <h3 class="text-2xl font-bold text-green-900 mb-2">Inscription confirmée !</h3>
+    <p class="text-green-700 mb-4">Merci de votre intérêt pour Immogest. Nous vous contacterons sous 24h à l'adresse
+        <strong>{{ email }}</strong>.
+    </p>
+    <p class="text-sm text-green-600">Vérifiez votre boîte mail pour plus d'informations.</p>
+</div>
+{% endif %}
