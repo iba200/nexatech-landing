@@ -2,23 +2,24 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="relative bg-gray-900 text-white min-h-[90vh] flex items-center overflow-hidden">
+<section
+    class="relative bg-gray-900 text-white min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden py-12 md:py-0">
     <!-- Abstract Background -->
     <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-[#0a192f] to-[#003366] z-0"></div>
 
-    <div class="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight animate-fade-in-up">
-                NexaTech <br>
+    <div class="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="space-y-4 md:space-y-6 text-center md:text-left">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight animate-fade-in-up">
+                NexaTech <br class="hidden sm:block">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#007BFF] to-blue-400">Solutions Tech
-                    Sur-Mesure</span> <br>
+                    Sur-Mesure</span> <br class="hidden sm:block">
                 pour l'Afrique
             </h1>
-            <p class="text-xl text-gray-300 max-w-lg">
+            <p class="text-lg md:text-xl text-gray-300 max-w-lg mx-auto md:mx-0">
                 Développement web, SaaS innovants et maintenance technique au Sénégal. Nous transformons vos idées en
                 réalité digitale.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4">
                 <a href="{{ url_for('services') }}" class="btn-primary text-center">Découvrir nos services</a>
                 <a href="{{ url_for('contact') }}"
                     class="btn-secondary text-center hover:bg-gray-800 border-white text-white hover:text-white">Parler
@@ -30,7 +31,6 @@
         <div class="hidden md:flex justify-center items-center">
             <div
                 class="w-full h-96 bg-gradient-to-tr from-blue-900/30 to-blue-500/10 rounded-2xl backdrop-blur-sm border border-white/10 flex items-center justify-center p-8 shadow-2xl">
-                <!-- Placeholder for future 3D element or illustration -->
                 <div class="text-center space-y-4">
                     <svg class="w-32 h-32 mx-auto text-blue-500 opacity-80" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
@@ -45,51 +45,52 @@
 </section>
 
 <!-- Services Overview -->
-<section class="py-20 bg-white">
+<section class="py-12 md:py-20 bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Notre Expertise</h2>
-            <p class="text-gray-600 text-lg">Des solutions complètes pour accompagner votre croissance numérique.</p>
+        <div class="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Notre Expertise</h2>
+            <p class="text-gray-600 text-base md:text-lg">Des solutions complètes pour accompagner votre croissance
+                numérique.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
             <!-- Web Dev -->
             <div
-                class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                class="group p-6 md:p-8 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-1">
                 <div
-                    class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-blue-600 text-2xl group-hover:bg-blue-600 group-hover:text-white transition">
+                    class="w-12 h-12 md:w-14 md:h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4 md:mb-6 text-blue-600 text-xl md:text-2xl group-hover:bg-blue-600 group-hover:text-white transition">
                     💻</div>
-                <h3 class="text-xl font-bold mb-3">Sites & App Web</h3>
-                <p class="text-gray-600 mb-6">Sites vitrines, e-commerce et applications métier sur-mesure conçus pour
-                    la performance.</p>
-                <a href="{{ url_for('services') }}" class="text-blue-600 font-semibold group-hover:underline">En savoir
-                    plus →</a>
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Sites & App Web</h3>
+                <p class="text-gray-600 text-sm md:text-base mb-4 md:mb-6">Sites vitrines, e-commerce et applications
+                    métier sur-mesure conçus pour la performance.</p>
+                <a href="{{ url_for('services') }}"
+                    class="text-blue-600 font-semibold group-hover:underline text-sm md:text-base">En savoir plus →</a>
             </div>
 
             <!-- SaaS -->
             <div
-                class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                class="group p-6 md:p-8 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-1">
                 <div
-                    class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-6 text-orange-600 text-2xl group-hover:bg-orange-500 group-hover:text-white transition">
+                    class="w-12 h-12 md:w-14 md:h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4 md:mb-6 text-orange-600 text-xl md:text-2xl group-hover:bg-orange-500 group-hover:text-white transition">
                     🚀</div>
-                <h3 class="text-xl font-bold mb-3">Solutions SaaS</h3>
-                <p class="text-gray-600 mb-6">Développement de logiciels en ligne (SaaS) robustes et scalables adaptés à
-                    vos besoins spécifiques.</p>
-                <a href="{{ url_for('services') }}" class="text-blue-600 font-semibold group-hover:underline">Découvrir
-                    →</a>
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Solutions SaaS</h3>
+                <p class="text-gray-600 text-sm md:text-base mb-4 md:mb-6">Développement de logiciels en ligne (SaaS)
+                    robustes et scalables adaptés à vos besoins spécifiques.</p>
+                <a href="{{ url_for('services') }}"
+                    class="text-blue-600 font-semibold group-hover:underline text-sm md:text-base">Découvrir →</a>
             </div>
 
             <!-- Maintenance -->
             <div
-                class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-1">
+                class="group p-6 md:p-8 rounded-2xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition duration-300 hover:-translate-y-1 sm:col-span-2 md:col-span-1">
                 <div
-                    class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-600 text-2xl group-hover:bg-green-600 group-hover:text-white transition">
+                    class="w-12 h-12 md:w-14 md:h-14 bg-green-100 rounded-full flex items-center justify-center mb-4 md:mb-6 text-green-600 text-xl md:text-2xl group-hover:bg-green-600 group-hover:text-white transition">
                     🔧</div>
-                <h3 class="text-xl font-bold mb-3">Support & Maintenance</h3>
-                <p class="text-gray-600 mb-6">Hébergement sécurisé, mises à jour régulières et support technique réactif
-                    24/7.</p>
-                <a href="{{ url_for('services') }}" class="text-blue-600 font-semibold group-hover:underline">Nos offres
-                    →</a>
+                <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Support & Maintenance</h3>
+                <p class="text-gray-600 text-sm md:text-base mb-4 md:mb-6">Hébergement sécurisé, mises à jour régulières
+                    et support technique réactif 24/7.</p>
+                <a href="{{ url_for('services') }}"
+                    class="text-blue-600 font-semibold group-hover:underline text-sm md:text-base">Nos offres →</a>
             </div>
         </div>
     </div>
@@ -104,47 +105,10 @@
                 <div
                     class="absolute -top-10 -left-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob">
                 </div>
-                <div
-                    class="bg-white p-6 rounded-2xl shadow-2xl relative z-10 transform -rotate-2 hover:rotate-0 transition duration-500">
-                    <!-- Placeholder UI Mockup -->
-                    <div class="border-b pb-4 mb-4 flex justify-between items-center">
-                        <span class="font-bold text-gray-800">Immogest Dashboard</span>
-                        <div class="flex space-x-2">
-                            <div class="w-3 h-3 bg-red-400 rounded-full"></div>
-                            <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                            <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-end">
-                            <div>
-                                <p class="text-xs text-gray-500 uppercase">Revenus ce mois</p>
-                                <p class="text-3xl font-bold text-gray-900">1,250,000 FCFA</p>
-                            </div>
-                            <span class="text-green-500 bg-green-100 px-2 py-1 rounded text-xs font-bold">+12%</span>
-                        </div>
-                        <div class="h-32 bg-gray-100 rounded-lg flex items-end justify-between p-2 gap-2">
-                            <div class="w-full bg-blue-200 h-[40%] rounded-sm"></div>
-                            <div class="w-full bg-blue-300 h-[60%] rounded-sm"></div>
-                            <div class="w-full bg-blue-400 h-[50%] rounded-sm"></div>
-                            <div class="w-full bg-blue-500 h-[80%] rounded-sm"></div>
-                            <div class="w-full bg-blue-600 h-[90%] rounded-sm"></div>
-                        </div>
-                        <div class="space-y-2 pt-2">
-                            <div class="flex items-center justify-between text-sm">
-                                <span class="flex items-center gap-2">
-                                    <div class="w-8 h-8 rounded-full bg-gray-200"></div> Locataire A. Diop
-                                </span>
-                                <span class="text-green-600 font-medium">Payé (Wave)</span>
-                            </div>
-                            <div class="flex items-center justify-between text-sm">
-                                <span class="flex items-center gap-2">
-                                    <div class="w-8 h-8 rounded-full bg-gray-200"></div> Locataire M. Sow
-                                </span>
-                                <span class="text-orange-500 font-medium">En attente</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="relative z-10 transform -rotate-2 hover:rotate-0 transition duration-500">
+                    <img src="{{ url_for('static', filename='images/immogest/dashboard.png') }}"
+                        alt="Immogest Dashboard"
+                        class="rounded-2xl shadow-2xl w-full h-auto object-cover border-4 border-white/20">
                 </div>
             </div>
 

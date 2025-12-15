@@ -3,10 +3,11 @@
 {% block title %}À Propos - NexaTech{% endblock %}
 
 {% block content %}
-<section class="bg-gray-900 text-white py-20">
+<section class="bg-gray-900 text-white py-12 md:py-20">
     <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl font-bold mb-4">À Propos de NexaTech</h1>
-        <p class="text-xl text-gray-400">Une vision locale, une expertise globale.</p>
+        <h1 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4">À Propos de NexaTech</h1>
+        <p class="text-lg md:text-xl text-gray-400">Notre mission : accompagner la transformation digitale de l'Afrique
+        </p>
     </div>
 </section>
 
@@ -76,6 +77,135 @@
         </div>
     </div>
 </section>
+
+<!-- Équipe -->
+<section class="py-12 md:py-20 bg-white" id="team">
+    <div class="container mx-auto px-4">
+        <!-- Header with Logo -->
+        <div class="text-center mb-10 md:mb-12">
+            <img src="{{ url_for('static', filename='images/nexatech_logo.svg') }}" alt="NexaTech"
+                class="h-12 mx-auto mb-4">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">Notre Équipe</h2>
+            <p class="text-gray-600">Des passionnés de la tech au service de votre croissance</p>
+        </div>
+
+        <!-- Team Carousel -->
+        <div class="relative max-w-4xl mx-auto">
+            <div class="overflow-hidden">
+                <div id="team-slides" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Member 1 - Ibrahima -->
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div
+                            class="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-6 md:p-8 text-center shadow-lg">
+                            <div
+                                class="w-28 h-28 md:w-36 md:h-36 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl bg-blue-100 flex items-center justify-center text-5xl">
+                                👨‍💻
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900">Ibrahima Thiongane</h3>
+                            <p class="text-blue-600 font-semibold mb-3">Co-Fondateur & Lead Developer</p>
+                            <p class="text-gray-600 text-sm md:text-base max-w-md mx-auto italic">"Construire des
+                                solutions qui ont un impact réel sur le terrain africain."</p>
+                        </div>
+                    </div>
+
+                    <!-- Member 2 - Souleymane -->
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div
+                            class="bg-gradient-to-br from-purple-50 to-gray-50 rounded-2xl p-6 md:p-8 text-center shadow-lg">
+                            <div
+                                class="w-28 h-28 md:w-36 md:h-36 mx-auto mb-4 rounded-full overflow-hidden border-4 border-purple-500 shadow-xl bg-purple-100 flex items-center justify-center text-5xl">
+                                �
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900">Souleymane</h3>
+                            <p class="text-purple-600 font-semibold mb-3">Secrétaire Général</p>
+                            <p class="text-gray-600 text-sm md:text-base max-w-md mx-auto italic">"L'organisation au
+                                service de l'innovation."</p>
+                        </div>
+                    </div>
+
+                    <!-- Member 3 - Mouhamad -->
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div
+                            class="bg-gradient-to-br from-orange-50 to-gray-50 rounded-2xl p-6 md:p-8 text-center shadow-lg">
+                            <div
+                                class="w-28 h-28 md:w-36 md:h-36 mx-auto mb-4 rounded-full overflow-hidden border-4 border-orange-500 shadow-xl bg-orange-100 flex items-center justify-center text-5xl">
+                                📈
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900">Mouhamad</h3>
+                            <p class="text-orange-600 font-semibold mb-3">Responsable Marketing</p>
+                            <p class="text-gray-600 text-sm md:text-base max-w-md mx-auto italic">"Faire rayonner
+                                NexaTech à travers l'Afrique."</p>
+                        </div>
+                    </div>
+
+                    <!-- Member 4 - Mame Ahmad -->
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div
+                            class="bg-gradient-to-br from-green-50 to-gray-50 rounded-2xl p-6 md:p-8 text-center shadow-lg">
+                            <div
+                                class="w-28 h-28 md:w-36 md:h-36 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500 shadow-xl bg-green-100 flex items-center justify-center text-5xl">
+                                ⚙️
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-900">Mame Ahmad</h3>
+                            <p class="text-green-600 font-semibold mb-3">Responsable Technique</p>
+                            <p class="text-gray-600 text-sm md:text-base max-w-md mx-auto italic">"La qualité technique
+                                avant tout."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Navigation -->
+            <div class="flex justify-center items-center gap-4 mt-8">
+                <button onclick="prevTeamSlide()"
+                    class="w-12 h-12 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition text-xl font-bold">
+                    ←
+                </button>
+                <div class="flex gap-2" id="team-dots">
+                    <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+                    <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+                    <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+                    <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+                </div>
+                <button onclick="nextTeamSlide()"
+                    class="w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center transition text-xl font-bold">
+                    →
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    let teamCurrentSlide = 0;
+    const teamTotalSlides = 4;
+
+    function updateTeamSlide() {
+        const slides = document.getElementById('team-slides');
+        slides.style.transform = `translateX(-${teamCurrentSlide * 100}%)`;
+
+        // Update dots
+        const dots = document.getElementById('team-dots').children;
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = i === teamCurrentSlide
+                ? 'w-3 h-3 rounded-full bg-blue-600 transition'
+                : 'w-3 h-3 rounded-full bg-gray-300 transition';
+        }
+    }
+
+    function nextTeamSlide() {
+        teamCurrentSlide = (teamCurrentSlide + 1) % teamTotalSlides;
+        updateTeamSlide();
+    }
+
+    function prevTeamSlide() {
+        teamCurrentSlide = (teamCurrentSlide - 1 + teamTotalSlides) % teamTotalSlides;
+        updateTeamSlide();
+    }
+
+    // Auto-rotate every 4 seconds
+    setInterval(nextTeamSlide, 4000);
+</script>
 
 <!-- Values -->
 <section class="py-20 bg-gray-50">

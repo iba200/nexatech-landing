@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
 from datetime import datetime
@@ -122,9 +122,27 @@ L'équipe NexaTech
 # Routes
 # =========================
 
+
+# =========================
+# Error Handlers
+# =========================
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+# =========================
+# Routes
+# =========================
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+@app.route('/favicon.ico')
+def static_from_root():
+    return app.send_static_file(request.path[1:])
 
 @app.route('/services')
 def services():
@@ -270,35 +288,96 @@ def stats():
     return render_template('partials/stats.html')
 
 # =========================
-# Admin Routes (optional)
+# Admin Routes & Auth
 # =========================
 
-@app.route('/admin/contacts')
-def admin_contacts():
-    """View all contact submissions (protect in production!)"""
+import functools
+
+def login_required(view):
+    @functools.wraps(view)
+    def wrapped_view(**kwargs):
+        if not session.get('logged_in'):
+            return redirect(url_for('admin_login'))
+        return view(**kwargs)
+    return wrapped_view
+
+@app.route('/admin/login', methods=['GET', 'POST'])
+def admin_login():
+    if request.method == 'POST':
+        password = request.form.get('password')
+        # Simple env-based password check (default: admin123)
+        admin_pass = os.environ.get('ADMIN_PASSWORD', 'admin123')
+        
+        if password == admin_pass:
+            session['logged_in'] = True
+            return redirect(url_for('admin_dashboard'))
+        else:
+            return render_template('admin/login.html', error="Mot de passe incorrect")
+            
+    return render_template('admin/login.html')
+
+@app.route('/admin/logout')
+def admin_logout():
+    session.pop('logged_in', None)
+    return redirect(url_for('index'))
+
+@app.route('/admin/dashboard')
+@login_required
+def admin_dashboard():
+    query = request.args.get('q', '').strip()
+    project_type = request.args.get('type', '').strip()
+    page = request.args.get('page', 1, type=int)
+    per_page = 10
+    
+    # --- Contacts Query ---
+    contacts_query = ContactSubmission.query
+    
+    # Search Filter
+    if query:
+        search_filter = f"%{query}%"
+        contacts_query = contacts_query.filter(
+            db.or_(
+                ContactSubmission.name.ilike(search_filter),
+                ContactSubmission.email.ilike(search_filter),
+                ContactSubmission.company.ilike(search_filter),
+                ContactSubmission.message.ilike(search_filter)
+            )
+        )
+    
+    # Category Filter
+    if project_type:
+        contacts_query = contacts_query.filter(ContactSubmission.project_type == project_type)
+        
+    # Execute Pagination
+    contacts = contacts_query.order_by(ContactSubmission.created_at.desc())\
+        .paginate(page=page, per_page=per_page, error_out=False)
+        
+    # --- Signups Query ---
+    signups_query = BetaSignup.query
+    
+    if query:
+        signups_query = signups_query.filter(BetaSignup.email.ilike(f"%{query}%"))
+        
+    signups = signups_query.order_by(BetaSignup.created_at.desc())\
+        .paginate(page=page, per_page=per_page, error_out=False)
+    
+    return render_template('admin/dashboard.html', 
+                         contacts=contacts, 
+                         signups=signups, 
+                         query=query,
+                         current_type=project_type)
+
+# Kept for API reference if needed, but protected now
+@app.route('/api/admin/contacts')
+@login_required
+def api_admin_contacts():
     contacts = ContactSubmission.query.order_by(ContactSubmission.created_at.desc()).all()
     return jsonify([{
         'id': c.id,
         'name': c.name,
         'email': c.email,
-        'phone': c.phone,
-        'company': c.company,
-        'project_type': c.project_type,
-        'budget': c.budget,
-        'message': c.message,
         'created_at': c.created_at.isoformat()
     } for c in contacts])
-
-@app.route('/admin/beta-signups')
-def admin_beta_signups():
-    """View all beta signups (protect in production!)"""
-    signups = BetaSignup.query.order_by(BetaSignup.created_at.desc()).all()
-    return jsonify([{
-        'id': s.id,
-        'email': s.email,
-        'properties': s.properties,
-        'created_at': s.created_at.isoformat()
-    } for s in signups])
 
 if __name__ == '__main__':
     app.run(debug=True)
